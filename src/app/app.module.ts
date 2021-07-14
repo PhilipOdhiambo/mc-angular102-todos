@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TodoComponent } from './todo/todo.component';
 import { TodoDetailComponent } from './todo-detail/todo-detail.component';
+import { DeadlineDatePipe } from './deadline-date.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoComponent,
-    TodoDetailComponent
+    TodoDetailComponent,
+    DeadlineDatePipe
   ],
   imports: [
     BrowserModule,
