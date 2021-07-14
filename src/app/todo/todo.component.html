@@ -11,10 +11,10 @@
         <li *ngFor="let todo of filterTodos">
             {{todo.description}}
 
-            <button>Show Details</button>
+            <button (click)="todo.showDetail=!todo.showDetail">Show/Hide Detail</button>
             <button>Completed</button>
             <button>Delete</button>
-            <app-todo-detail [todo]="todo"></app-todo-detail>
+            <app-todo-detail *ngIf="todo.showDetail" [todo]="todo" (hideDetail)="onHideDetail()"></app-todo-detail>
 
         </li>
     </ul>

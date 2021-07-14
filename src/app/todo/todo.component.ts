@@ -35,6 +35,10 @@ export class TodoComponent implements OnInit {
     this.filterTodos = this.todos.filter(todo => todo.category === filterValue)
   }
 
+  onHideDetail() {
+    
+  }
+
   constructor() {
     this.filterTodos = this.todos;
 

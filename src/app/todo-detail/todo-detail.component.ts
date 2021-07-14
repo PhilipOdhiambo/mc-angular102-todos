@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Todo } from '../todo';
 
 @Component({
@@ -9,6 +9,11 @@ import { Todo } from '../todo';
 export class TodoDetailComponent implements OnInit {
 
   @Input() todo:Todo
+  @Output() hideDetail = new EventEmitter()
+
+  onHide() {
+    this.hideDetail.emit();
+  }
 
   constructor() { }
 
