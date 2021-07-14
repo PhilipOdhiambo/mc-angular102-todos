@@ -1,0 +1,22 @@
+<div>
+    <h2>Todo's</h2>
+    <label for="filter-todo">Filter todos: </label>
+    <select name="" id="filter-todo" (change)="onFilterTodos($event)">
+        <option value="">All</option>
+        <option *ngFor="let category of getCategories()">
+            {{category}}
+        </option>
+    </select>
+    <ul>
+        <li *ngFor="let todo of filterTodos">
+            {{todo.description}}
+
+            <button>Show Details</button>
+            <button>Completed</button>
+            <button>Delete</button>
+            <app-todo-detail [todo]="todo"></app-todo-detail>
+
+        </li>
+    </ul>
+    
+</div>
